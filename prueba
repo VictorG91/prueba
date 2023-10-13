@@ -1,0 +1,54 @@
+package UD2_Act2;
+
+import java.util.Scanner;
+
+public class Ejercicio12 {
+	
+	public static void main (String args[]) {
+		
+		//Introducimos entrada de teclado
+		Scanner reader = new Scanner(System.in);
+		
+		//Introducimos variables
+		int num;
+		int contPositivo = 0;
+		int contNegativo = 0;
+		
+		
+		for (int i =1; i <= 100; i++) {
+			
+			//Solicita introducir numero
+			System.out.println("Introduce numero "+i);
+			num = reader.nextInt();
+			
+			//Condicion Si es negativo, suma contador
+			if (num<0){
+				contNegativo++;
+				
+				
+			} 
+			//Condicion Si no, suma contador positivo
+			else {
+				contPositivo++;
+			}
+			
+			//Condicion Si numero es 0, muestra mensajes
+			if (num==0) {
+			
+				if(contNegativo>0) {
+					System.out.println("He leido algun numero negativo");
+					System.out.println("He leido "+ contNegativo + " numeros negativos");
+				}
+				if(contPositivo>0) {
+					System.out.println("He leido "+ contPositivo + " numeros positivos");
+					
+			}        
+			
+			//Se cierra bucle
+			break;
+		}
+		
+	}
+	
+}
+}
